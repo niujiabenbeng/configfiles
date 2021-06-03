@@ -142,7 +142,7 @@ install_ffmpeg_from_source() {
     sudo apt install libfreetype6-dev libvorbis-dev texinfo zlib1g-dev
     sudo apt install nasm yasm libx264-dev libx265-dev libnuma-dev libvpx-dev
     sudo apt install libfdk-aac-dev libmp3lame-dev libopus-dev
-    ### compile with shared & -fpic
+    # compile with shared & -fpic
     ./configure \
         --enable-shared \
         --extra-cflags="-fPIC" \
