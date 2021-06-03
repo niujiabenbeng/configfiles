@@ -1,7 +1,11 @@
 #! /bin/zsh
 
-### zsh下实现shift select功能, 参考:
-###   https://stackoverflow.com/questions/5407916/zsh-zle-shift-selection
+# Local Variables:
+# eval: (editorconfig-mode -1)
+# End:
+
+# zsh下实现shift select功能, 参考:
+#   https://stackoverflow.com/questions/5407916/zsh-zle-shift-selection
 
 r-delregion() {
     if ((REGION_ACTIVE)) then
@@ -33,7 +37,7 @@ r-bind-key() {
     mode=$3
     widget=$4
     shift 4
-    ### 定义每一个键的函数
+    # 定义每一个键的函数
     eval "key-${key}() {
        r-${mode} ${widget} \$@
     }
@@ -42,7 +46,7 @@ r-bind-key() {
     "
 }
 
-### only for copy-region-as-kill
+# only for copy-region-as-kill
 r-copyregion() {
     if ((REGION_ACTIVE)) then
        zle copy-region-as-kill
@@ -53,7 +57,7 @@ zle -N r-copyregion
 
 ################################# key binding ##################################
 
-### 常规键, 按下之后取消选择
+# 常规键, 按下之后取消选择
 r-bind-key  left     "\eOD"    deselect  backward-char
 r-bind-key  right    "\eOC"    deselect  forward-char
 r-bind-key  c-left   "\e[D"    deselect  backward-word
@@ -67,7 +71,7 @@ r-bind-key  c-end    "\e[a4~"  deselect  end-of-line
 r-bind-key  up       "\eOA"    deselect  up-line-or-history
 r-bind-key  down     "\eOB"    deselect  down-line-or-history
 
-### Shift修饰的键, 按下之后开始选择
+# Shift修饰的键, 按下之后开始选择
 r-bind-key  s-left    "\e[bD"   select  backward-char
 r-bind-key  s-right   "\e[bC"   select  forward-char
 r-bind-key  cs-left   "\e[dD"   select  backward-word
@@ -79,7 +83,7 @@ r-bind-key  cs-end    "\e[d4~"  select  end-of-line
 r-bind-key  s-up      "\e[bA"   select  up-line-or-history
 r-bind-key  s-down    "\e[bB"   select  down-line-or-history
 
-### 删除键, 按下之后删除选中的文字
+# 删除键, 按下之后删除选中的文字
 r-bind-key  delete       "\e[3~"    delregion  delete-char
 r-bind-key  backspace    "\b"       delregion  backward-delete-char
 r-bind-key  c-backspace  "\e[aF"    delregion  backward-kill-word
@@ -87,7 +91,7 @@ r-bind-key  c-delete     "\e[a3~"   delregion  kill-word
 r-bind-key  m-backspace  "\e[cF"    delregion  backward-kill-word
 r-bind-key  m-delete     "\e\e[3~"  delregion  kill-word
 
-### 其他按键, 模拟emacs
-### zsh中, 先按C-v, 再按目标键可以得到该键的字符序列
+# 其他按键, 模拟emacs
+# zsh中, 先按C-v, 再按目标键可以得到该键的字符序列
 bindkey  "^w"   kill-region   #  C-w
 bindkey  "^[w"  r-copyregion  #  M-w

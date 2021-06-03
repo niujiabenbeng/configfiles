@@ -1,6 +1,10 @@
 # Put your custom themes in this folder.
 # Example:
 
+# Local Variables:
+# eval: (editorconfig-mode -1)
+# End:
+
 IP=`hostname -I | awk '{print $1}'`
 PROMPT_SIMPLE="%n@${IP}:%~ "
 PROMPT_COMPLEX="\
