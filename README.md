@@ -1,10 +1,15 @@
-## emacsclient.desktop
+## 配置文件集合
+
+这里放置的是一些日常使用的配置文件的集合. 主要是linux环境下的配置文件.
+
+
+#### emacsclient.desktop
 
 emacsclient.desktop位于~/.local/share/applications, 在terminal中打开emacsclient, 参考:
 [How can I add 'emacs' to one of the 'Show other application' in file explorer](https://askubuntu.com/questions/283285/how-can-i-add-emacs-to-one-of-the-show-other-application-in-file-explorer)
 
 
-## 远程连接jupyter notebook
+#### 远程连接jupyter notebook
 
 将jupyter_notebook_config.py拷贝到~/.jupyter中:
 
