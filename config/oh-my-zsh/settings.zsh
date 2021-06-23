@@ -16,11 +16,6 @@ export PATH=${TOOLS}/clang/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=${TOOLS}/clang/lib:$LD_LIBRARY_PATH
 
-# used in emacs python mode
-export PYTHONENV=${TOOLS}/anaconda3/envs/pytorch/bin/python
-export YAPFEXEC=${TOOLS}/anaconda3/envs/pytorch/bin/yapf
-export PYLSEXEC=${TOOLS}/anaconda3/envs/pytorch/bin/pyls
-
 # command settings
 export TERM=xterm-256color
 export no_proxy=127.0.0.1

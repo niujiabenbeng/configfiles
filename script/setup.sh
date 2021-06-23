@@ -1,6 +1,6 @@
 #! /bin/bash
 
-curr_dir=$(dirname $0)
+curr_dir=$(dirname $(realpath $0))
 proj_dir=$(dirname ${curr_dir})
 
 setup_config() {
