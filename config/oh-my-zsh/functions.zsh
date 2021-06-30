@@ -25,7 +25,7 @@ killemacs() {
 # open file in emacsclient mode
 e() {
     if [ $# -eq 0 ]; then
-        emacsclient -t --eval "(emacs-client-load-session nil)"
+        emacsclient -t --eval "(emacs-client-load-session)"
     elif [ $# -gt 1 ]; then
         echo "command 'e' requires only one input."
     elif [ -f $1 ]; then
@@ -38,7 +38,7 @@ e() {
 # open file with read only mode
 ev() {
     if [ $# -eq 0 ]; then
-        emacsclient -t --eval "(emacs-client-load-session nil)"
+        emacsclient -t --eval "(emacs-client-load-session)"
     elif [ $# -gt 1 ]; then
         echo "command 'ev' requires only one input."
     elif [ -f $1 ]; then
