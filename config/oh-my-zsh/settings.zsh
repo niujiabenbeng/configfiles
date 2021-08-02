@@ -11,6 +11,7 @@ TOOLS=${HOME}/Documents/tools
 export PATH=/usr/local/bin:$PATH
 export PATH=${TOOLS}/emacs/bin:$PATH
 export PATH=${TOOLS}/clang/bin:$PATH
+export PATH=${TOOLS}/clang/share/clang:$PATH
 
 # LD_LIBRARY_PATH settings
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
