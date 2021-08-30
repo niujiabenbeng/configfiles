@@ -84,3 +84,7 @@ rm() {
 conn() {
     ssh ainfinit@tunnel.ainfinit.com -p $1
 }
+
+connt1() {
+    ssh ainfinit@t1.ainfinit.com -p $1
+}
