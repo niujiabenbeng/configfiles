@@ -27,7 +27,6 @@ setup_config() {
 # setup dot files
 setup_config ${proj_dir}/config ${HOME} dot.bashrc
 setup_config ${proj_dir}/config ${HOME} dot.condarc
-setup_config ${proj_dir}/config ${HOME} dot.git-credentials
 setup_config ${proj_dir}/config ${HOME} dot.gitconfig
 setup_config ${proj_dir}/config ${HOME} dot.zshrc
 
