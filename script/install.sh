@@ -113,7 +113,6 @@ install_from_source_protobuf() {
 
     TEMP=${NAME%.tar.gz}
     cd ${CACHE} && tar zxf ${NAME} && cd ${TEMP}
-    sudo apt install autoconf automake libtool curl make g++ unzip
     ./configure --prefix=${TOOLS}/protobuf
     make -j${THREADS} && make install
 }
@@ -218,7 +217,7 @@ install_from_source_ohmyzsh() {
 # step 1: install tools
 sudo apt update
 sudo apt install -y build-essential
-sudo apt install -y automake autoconf pkg-config
+sudo apt install -y automake autoconf pkg-config unzip libtool
 sudo apt install -y git wget curl cmake zsh cmake-curses-gui openssh-server
 
 # step 2: install deps
