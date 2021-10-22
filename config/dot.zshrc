@@ -104,6 +104,11 @@ source $ZSH/oh-my-zsh.sh
 
 ############################## personal settings ###############################
 
+# load machine specific settings
+if [ -f ${HOME}/.machineinfo ]; then
+    source ${HOME}/.machineinfo
+fi
+
 autoload -Uz compinit; compinit;
 bindkey "^Xa" _expand_alias
 zstyle ':completion:*' completer _expand_alias _complete _ignored

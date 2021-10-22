@@ -88,18 +88,3 @@ conn() {
 connt1() {
     ssh ainfinit@t1.ainfinit.com -p $1
 }
-
-scpp() {
-    if [ $(cat /etc/hostname) = hairong_gpu_78 ]; then
-        echo "scp -P 60022 chenli@120.192.147.88:$(realpath $1) ."
-        echo "scp chenli@10.0.0.78:$(realpath $1) ."
-    elif [ $(cat /etc/hostname) = hiron ]; then
-        echo "scp -P 60028 chenli@120.192.147.88:$(realpath $1) ."
-        echo "scp chenli@10.0.0.77:$(realpath $1) ."
-    elif [ $(cat /etc/hostname) = Data_Tower ]; then
-        echo "scp -P 60025 chenli@120.192.147.88:$(realpath $1) ."
-        echo "scp chenli@10.0.0.79:$(realpath $1) ."
-    else
-        echo "unknown machine."
-    fi
-}
